@@ -1,9 +1,9 @@
-name: Test Self Hosted Runner
+name: Deploy Portfolio
 
 on:
   push:
     branches:
-      - main
+      - development
 
 jobs:
   test-runner:
@@ -13,11 +13,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Show System Information
+      - name: build image
         run: |
-          echo "Runner is working!"
-          whoami
-          pwd
-          hostname
-          docker --version
-          docker compose version
+          echo "build image with latest code...."
+          docker compose build
+
+      - name: run container
+        run: |
+          echo "running container with new image"
+          docker compose up -d
