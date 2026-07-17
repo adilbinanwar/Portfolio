@@ -21,7 +21,6 @@ jobs:
       - name: run container
         run: |
           echo "running container with new image"
-          sudo docker compose down
 
           echo "show current directory"
           pwd
