@@ -22,4 +22,5 @@ jobs:
         run: |
           echo "running container with new image"
           sudo docker compose down
+          cd _work/Portfolio/Portfolio
           sudo docker compose up -d
