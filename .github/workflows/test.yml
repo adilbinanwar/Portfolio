@@ -7,7 +7,7 @@ on:
 
 jobs:
   test-runner:
-    runs-on: adil
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
